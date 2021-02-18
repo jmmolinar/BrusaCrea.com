@@ -138,6 +138,11 @@ body {
     width: 300px;
     /* Para centrar la imagen */
     display:block;
+    transition: transform 1s;
+  }
+
+  img:hover {
+    transform: scale(1.10) translateX(0px);
   }
 
   .imgAjax {
@@ -266,6 +271,10 @@ body {
     display: inline-block;
     left: 50%;
   }
+
+
+
+  /* .g-recaptcha {transform: scale(0.85); transform-origin: left top;} */
 
   .custom-btn-back {
     /*width: 130px;*/
@@ -568,9 +577,12 @@ body {
   .circular--square {
     width: 50%;
     border-radius: 50%;
+    transition: transform 1s;
   }
 
-
+  .circular--square:hover {
+    transform: scale(1.05) translateX(0px);
+  }
 
   @media screen and (min-width: 480px) {
   
@@ -595,6 +607,11 @@ body {
       width: 200px;
       /* Para centrar la imagen */
       display:block;
+      transition: transform 1s;
+    }
+
+    img:hover {
+      transform: scale(1.10) translateX(0px);
     }
 
 
