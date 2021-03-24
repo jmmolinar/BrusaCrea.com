@@ -281,35 +281,29 @@ $(function () {
     });
 
     //EVENTO AL PRESIONAR EL PORTAFOLIO DE BEHANCE
-    $('div #pages').on('click', 'img#imgTableBehance', function () {
+    $('div #pages').on('click', 'img#imgLiBehance', function () {
         console.log("JQUERY - Behance en nueva ventana")
         $(location).attr('href');
         window.open("https://www.behance.net/sabrinaleanez", '_blank');
     });
 
     //EVENTO AL PRESIONAR EL PORTAFOLIO DE WIX
-    $('div #pages').on('click', 'img#imgTableWix', function () {
+    $('div #pages').on('click', 'img#imgLiWix', function () {
         console.log("JQUERY - Wix en nueva ventana")
         $(location).attr('href');
         window.open("https://sabribruji.wixsite.com/sabrina-leanez", '_blank');
     });
 
-    //EVENTO AL PRESIONAR EL BOTÓN DE CONTACTO DESDE PERFIL
-    $('div #pages').on('click', 'legend#contactoPerfil', function () {
-        console.log("JQUERY - Activo Ventana para enviar mensaje")
-        redirigir = "#/about";
-        $(location).attr('href', redirigir);
-
+    //EVENTO AL PRESIONAR EL DESCARGAR CV DESDE PERFIL
+    $('div #pages').on('click', 'legend#descargarPerfil', function () {
+        console.log("JQUERY - Descargar Curriculum")
+        $(location).attr('href');
+        window.open('../CV-SabrinaLeanezRamirezUXUI.pdf', '_blank');
+        // $('legend#descargarPerfil').attr({
+        //     target: '_blank',
+        //     href: '../../document/CV-SabrinaLeanezRamirezUXUI.pdf'
+        // });
     });
-
-    //EVENTO AL PRESIONAR EL BOTÓN DE CONTACTO DESDE PERFIL
-    $('div #pages').on('click', 'legend#contactoPerfil', function () {
-        console.log("JQUERY - Activo Ventana para enviar mensaje")
-        redirigir = "#/about";
-        $(location).attr('href', redirigir);
-
-    });
-
 
     // EVENTOS AL PRESIONAR ENVIAR
     $('div #pages').on('click', 'button#enviar', function () {
@@ -326,7 +320,7 @@ $(function () {
         //Transición habia abajo
         $('#imgPortfolio').toggle(1000, function () {
             console.log('JQUERY - Mostrando las imágenes de Portafolios');
-            $("#imgPortfolio").addClass("divSkills");
+            $("#imgPortfolio").addClass("skillsContainer");
             $('html, body').animate({
                 scrollTop: $("#imgPortfolio").offset().top
             }, 1000)

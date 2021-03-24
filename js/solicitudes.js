@@ -15,7 +15,7 @@ var identity = `<form id="formulario" method="post" action="sendMail.php">
     mis proyectos y conectar con mis redes sociales.  No dudes en contactarme para trabajar juntos, darle vida
     a tus ideas por medio del diseño y compartir experiencias dentro del apasionante mundo de la creación.</p>
   </div>
-  <legend id="contacto" class="legend-contacto btn-2">Contáctame</legend>
+  <legend id="contacto" class="legend-skills btn-2">Contáctame</legend>
   <div id="componentes" class="hidden">
       <br><br>
       <input type="text" id="nombre" name="nombre" value="" placeholder="Nombre y Apellido" maxlength="30" required>
@@ -35,12 +35,10 @@ var skills = `<div id="skills">
   <legend id="portfolio" class="legend-skills btn-2">Portafolio</legend>
 </div>
 <div id="imgPortfolio" class="hidden">
-  <table class="tablePortfolio">
-  <tr>
-    <td><img id="imgTableBehance" class="imgTable" src="image/circle/behance.png"></td>
-    <td><img id="imgTableWix" class="imgTable" src="image/circle/wix.png"></td>
-  </tr>
-</table>
+<ul>
+  <li><img id="imgLiBehance" class="imgLi" src="image/circle/behance.png"></li>
+  <li><img id="imgLiWix" class="imgLi" src="image/circle/wix.png"></li>
+</ul>
 </div>
 <div class="divSkillsOptions">
   <legend id="designTools" class="legend-skills btn-2">Herramientas de Diseño</legend>
@@ -61,7 +59,7 @@ var skills = `<div id="skills">
   </div>
 </div>
 <div class="divSkillsOptions">
-  <legend id="contactoPerfil" class="legend-skills btn-2">Contáctame</legend>
+  <legend id="descargarPerfil" class="legend-skills btn-2">Descargar CV <i class="fas fa-cloud-download-alt"></i></legend>
 </div>
 <div id="skills">
 `;
