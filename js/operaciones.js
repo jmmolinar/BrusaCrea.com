@@ -2,7 +2,7 @@
   Desarrollo: José Miguel Molina Rondón
   BrusaCrea.com
 
-  - En contrucción
+  - En construccción
 
 */
 
@@ -13,52 +13,15 @@
 document.addEventListener('DOMContentLoaded', router)
 window.addEventListener('hashchange', router)
 
-//CON AJAX
-
-const PaginaAjaxTestimonios = {
+const About = {
     render: function () {
-        $.ajax({
-            type: 'GET',
-            url: 'js/testimonios.json',
-            dataType: 'json',
-            success: function (data, status, jqXHR) {
-                console.log(jqXHR)
-                let llenado = ''
-                for (const persona of data) {
-
-                    llenado += `
-                    <div>
-                        <h1 class="first"><br>${persona.first_name} ${persona.last_name}</h1>
-                        <p class="testimonios">"${persona.testimonio}"</p>
-                        <h2 class="first">${persona.email}</h2><br>
-                    </div>`
-
-                }
-
-                $('#pages').html(`
-                <div class="frame resaltadoTestimonios">
-                ${llenado}
-                </div>
-                <div class="frame">
-                <br><img src="image/thankyouline.png" alt="">
-                </div>
-                `)
-
-                console.log(`AJAX Testimonios -> Status: ${status}`)
-
-            },
-            error: function (jqXHR) {
-                console.log(jqXHR)
-            }
-        })
-
+        return identity;
     }
 }
 
-const PaginaAbout = {
+const SkillsPage = {
     render: function () {
-        //return formularioHTML;
-        return acercaDe;
+        return skills;
     }
 }
 
@@ -91,7 +54,7 @@ const MensajeNoEnviado = {
         <div id="notSent" class="mostrarTodo">
             <h1 class="first">:(</h1><br><br>
             <p class="footer">--- Mensaje no enviado ---</p><br><br>
-            <button id="volver" name="back" class="custom-btn-back btn-2" onclick="location.href='#/about'">Volver</button><br><br>
+            <button id="volver" name="back" class="custom-btn-send custom-btn-back btn-2" onclick="location.href='#/about'">Volver</button><br><br>
         </div>
         `;
     }
@@ -102,16 +65,16 @@ const Enviado = {
         return `
         <div id="sent" class="mostrarTodo">
             <h1 class="first">¡Enviado exitosamente!</h1><br><br>
-            <button id="volver" name="back" class="custom-btn-back btn-2" onclick="location.href='#/about'">Volver</button><br><br>
+            <button id="volver" name="back" class="custom-btn-send custom-btn-back btn-2" onclick="location.href='#/about'">Volver</button><br><br>
         </div>
         `;
     }
 }
 
 const routes = [
-    { path: '/about', component: PaginaAbout },
+    { path: '/about', component: About },
     { path: '/', component: HomePage },
-    { path: '/skills', component: PaginaAjaxTestimonios },
+    { path: '/skills', component: SkillsPage },
     { path: '/notsent', component: MensajeNoEnviado },
     { path: '/sent', component: Enviado }
 ]
@@ -172,12 +135,8 @@ function enviarMensaje() {
                 }
             }
         }
-        // $('#enviar').click(function (e) {
-        //     e.preventDefault();
-        // });
         return false;
     }
-    //return false;
 }
 
 //LIMPIA EL FORMULARIO
@@ -186,11 +145,31 @@ function remover() {
     console.log("JQUERY - Se reinicia el formulario")
 }
 
+
+// function resizeReCaptcha() {
+//     var width = $( ".g-recaptcha" ).parent().width();
+//     if (width < 302) {
+//         var scale = width / 302;
+//     } else {
+//         var scale = 1;
+//     }
+//     $( ".g-recaptcha" ).css('transform', 'scale(' + scale + ')');
+//     $( ".g-recaptcha" ).css('-webkit-transform', 'scale(' + scale + ')');
+//     $( ".g-recaptcha" ).css('transform-origin', '0 0');
+//     $( ".g-recaptcha" ).css('-webkit-transform-origin', '0 0');
+//   };
+
 //////////////////////////////////////////////////////////////////////
 // EVENTOS JQUERY 
 //////////////////////////////////////////////////////////////////////
 
 $(function () {
+
+    // $(window).resize(function () {
+    //     resizeReCaptcha();
+    // });
+
+    // resizeReCaptcha();
 
     //TENIENDO CARGADA LA PÁGINA
     //CAPTURANDO  input con la tecla ENTER
@@ -252,7 +231,38 @@ $(function () {
         $(this).css("background-color", '#E0F2F1')// Quito focus y agrego blur al textarea mensaje
     });
 
-    //MODIFICANDO PARA EL BOTÓN DE CONTACTO
+
+    //EVENTO AL PRESIONAR LA PRIMERA OPCIÓN DEL MENÚ
+    $('div #all').on('click', 'a#optionA', function () {
+        console.log("JQUERY - Activo Ventana de Identidad")
+
+        //Transición habia abajo
+        $('#formulario').show(1000, function () {
+            console.log('JQUERY - Mostrando Identidad que está al inicio de Formulario');
+            $('html, body').animate({
+                scrollTop: $("#formulario").offset().top
+            }, 1000)
+            console.log("JQUERY - Bajando con scroll a Identidad que está al inicio de Formulario")
+        });
+
+    });
+
+    //EVENTO AL PRESIONAR LA SEGUNDA OPCIÓN DEL MENÚ
+    $('div #all').on('click', 'a#optionB', function () {
+        console.log("JQUERY - Activo Ventana de Perfil")
+
+        //Transición habia abajo
+        $('#skills').show(1000, function () {
+            console.log('JQUERY - Mostrando el Contenido de Perfil que está al inicio de skills');
+            $('html, body').animate({
+                scrollTop: $("#skills").offset().top
+            }, 1000)
+            console.log("JQUERY - Bajando con scroll al contenido de Perfil que está al inicio de skills")
+        });
+
+    });
+
+    //EVENTO AL PRESIONAR EL BOTÓN DE CONTACTO
     $('div #pages').on('click', 'legend#contacto', function () {
         console.log("JQUERY - Activo Ventana para enviar mensaje")
 
@@ -270,15 +280,103 @@ $(function () {
 
     });
 
+    //EVENTO AL PRESIONAR EL PORTAFOLIO DE BEHANCE
+    $('div #pages').on('click', 'img#imgTableBehance', function () {
+        console.log("JQUERY - Behance en nueva ventana")
+        $(location).attr('href');
+        window.open("https://www.behance.net/sabrinaleanez", '_blank');
+    });
+
+    //EVENTO AL PRESIONAR EL PORTAFOLIO DE WIX
+    $('div #pages').on('click', 'img#imgTableWix', function () {
+        console.log("JQUERY - Wix en nueva ventana")
+        $(location).attr('href');
+        window.open("https://sabribruji.wixsite.com/sabrina-leanez", '_blank');
+    });
+
+    //EVENTO AL PRESIONAR EL BOTÓN DE CONTACTO DESDE PERFIL
+    $('div #pages').on('click', 'legend#contactoPerfil', function () {
+        console.log("JQUERY - Activo Ventana para enviar mensaje")
+        redirigir = "#/about";
+        $(location).attr('href', redirigir);
+
+    });
+
+    //EVENTO AL PRESIONAR EL BOTÓN DE CONTACTO DESDE PERFIL
+    $('div #pages').on('click', 'legend#contactoPerfil', function () {
+        console.log("JQUERY - Activo Ventana para enviar mensaje")
+        redirigir = "#/about";
+        $(location).attr('href', redirigir);
+
+    });
+
+
     // EVENTOS AL PRESIONAR ENVIAR
     $('div #pages').on('click', 'button#enviar', function () {
         if (enviarMensaje()) {
-            //Limpio el formulario luego de enviar
-            //$("#formulario")[0].reset();
-            //Oculto el div componentes del formulario después de enviar
             $('#componentes').fadeOut('slow');
         }
 
+    });
+
+    //EVENTO AL PRESIONAR OPCIÓN DE PORTAFOLOS
+    $('div #pages').on('click', 'legend#portfolio', function () {
+        console.log("JQUERY - Activo Ventana de Portafolios")
+
+        //Transición habia abajo
+        $('#imgPortfolio').toggle(1000, function () {
+            console.log('JQUERY - Mostrando las imágenes de Portafolios');
+            $("#imgPortfolio").addClass("divSkills");
+            $('html, body').animate({
+                scrollTop: $("#imgPortfolio").offset().top
+            }, 1000)
+            console.log("JQUERY - Bajando con scroll a las imágenes de portafolios")
+        });
+    });
+
+    //EVENTO AL PRESIONAR OPCIÓN DE HERRAMIENTAS DE DISEÑO
+    $('div #pages').on('click', 'legend#designTools', function () {
+        console.log("JQUERY - Activo Ventana de herramientas de diseño")
+
+        //Transición habia abajo
+        $('#imgDesignTools').toggle(1000, function () {
+            console.log('JQUERY - Mostrando las imágenes de herramientas de diseño');
+            $("#imgDesignTools").addClass("divSkills");
+            $('html, body').animate({
+                scrollTop: $("#imgDesignTools").offset().top
+            }, 1000)
+            console.log("JQUERY - Bajando con scroll a las imágenes de herramientas de diseño")
+        });
+    });
+
+    //EVENTO AL PRESIONAR OPCIÓN DE HERRAMIENTAS DE PROTOTIPADO
+    $('div #pages').on('click', 'legend#prototypeTools', function () {
+        console.log("JQUERY - Activo Ventana de herramientas de prototipado")
+
+        //Transición habia abajo
+        $('#imgPrototypeTools').toggle(1000, function () {
+            console.log('JQUERY - Mostrando las imágenes de herramientas de prototipado');
+            $("#imgPrototypeTools").addClass("divSkills");
+            $('html, body').animate({
+                scrollTop: $("#imgPrototypeTools").offset().top
+            }, 1000)
+            console.log("JQUERY - Bajando con scroll a las imágenes de herramientas de prototipado")
+        });
+    });
+
+    //EVENTO AL PRESIONAR OPCIÓN DE HERRAMIENTAS DE INVESTIGACIÓN
+    $('div #pages').on('click', 'legend#researchTools', function () {
+        console.log("JQUERY - Activo Ventana de herramientas de investigación")
+
+        //Transición habia abajo
+        $('#imgResearchTools').toggle(1000, function () {
+            console.log('JQUERY - Mostrando las imágenes de herramientas de investigación');
+            $("#imgResearchTools").addClass("divSkills");
+            $('html, body').animate({
+                scrollTop: $("#imgResearchTools").offset().top
+            }, 1000)
+            console.log("JQUERY - Bajando con scroll a las imágenes de herramientas de investigación")
+        });
     });
 
 })
