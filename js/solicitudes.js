@@ -24,7 +24,7 @@ var identity = `<form id="formulario" method="post" action="sendMail.php">
       <textarea id="mensaje" name="mensaje" rows="10" placeholder="Escribe tu mensaje" maxlength="500" required></textarea>
       <!--<div id="rc-anchor-container" class="g-recaptcha" data-sitekey="6LcQEFsaAAAAAOOAu5dw7ancr3jwsleVIqS7PA6d"></div>
       <br>-->
-      <button id="enviar" class="custom-btn-send custom-btn-back btn-2" type="submit">Enviar</button>
+      <button id="enviar" class="custom-btn-send btn-2" type="submit">Enviar</button>
       <br>
   </div>
 </form>
@@ -35,28 +35,40 @@ var skills = `<div id="skills">
   <legend id="portfolio" class="legend-skills btn-2">Portafolio</legend>
 </div>
 <div id="imgPortfolio" class="hidden">
-<ul>
-  <li><img id="imgLiBehance" class="imgLi" src="image/circle/behance.png"></li>
-  <li><img id="imgLiWix" class="imgLi" src="image/circle/wix.png"></li>
-</ul>
+  <ul>
+    <li>
+      <div class="divImage">
+        <!--<div id="tituloBehance" class="divImageText"><h5>Behance</h5></div>-->
+        <img id="imgLiBehance" class="imgLi" src="image/circle/behance.png">
+      </div>
+    </li>
+    <li>
+      <div class="divImage">
+        <!--<div id="tituloWix" class="divImageText"><h5>Wix</h5></div>-->
+        <img id="imgLiWix" class="imgLi" src="image/circle/wix.png">
+      </div>
+    </li>
+  </ul>
 </div>
 <div class="divSkillsOptions">
   <legend id="designTools" class="legend-skills btn-2">Herramientas de Diseño</legend>
 </div>
 <div id="imgDesignTools" class="hidden">
-  <div id="imgDesignToolsCollection" class="divCollection">
-    <img class="imgSkill" alt="Illustrator" src="image/circle/illustrator.png">
-    <img class="imgSkill" src="image/circle/photoshop.png">
-    <img class="imgSkill" src="image/circle/indesign.png">
-    <img class="imgSkill" src="image/circle/aftereffects.png">
-    <img class="imgSkill" src="image/circle/xd.png">
-    <img class="imgSkill" src="image/circle/figma.png">
-    <img class="imgSkill" src="image/circle/sketch.png">
-    <img class="imgSkill" src="image/circle/marvel.png">
-    <img class="imgSkill" src="image/circle/invision.png">
-    <img class="imgSkill" src="image/circle/ow.png">
-    <img class="imgSkill" src="image/circle/whimsical.png">
-  </div>
+  <!--<div class="divImage">
+    <div id="tituloIllustrator" class="divImageText divImageTextSkill"><h5>Illustrator</h5></div>
+    <img class="imgSkill" alt="Illustrator" src="image/circle/ai.png">
+  </div>-->
+  <img class="imgSkill" alt="Illustrator" src="image/circle/ai.png">
+  <img class="imgSkill" src="image/circle/ps.png">
+  <img class="imgSkill" src="image/circle/id.png">
+  <img class="imgSkill" src="image/circle/ae.png">
+  <img class="imgSkill" src="image/circle/xd.png">
+  <img class="imgSkill" src="image/circle/figma.png">
+  <img class="imgSkill" src="image/circle/sk.png">
+  <img class="imgSkill" src="image/circle/marvel.png">
+  <img class="imgSkill" src="image/circle/in.png">
+  <img class="imgSkill" src="image/circle/ow.png">
+  <img class="imgSkill" src="image/circle/whimsical.png">
 </div>
 <div class="divSkillsOptions">
   <legend id="descargarPerfil" class="legend-skills btn-2">Descargar CV <i class="fas fa-cloud-download-alt"></i></legend>

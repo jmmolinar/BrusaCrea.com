@@ -54,7 +54,7 @@ const MensajeNoEnviado = {
         <div id="notSent" class="mostrarTodo">
             <h1 class="first">:(</h1><br><br>
             <p class="footer">--- Mensaje no enviado ---</p><br><br>
-            <button id="volver" name="back" class="custom-btn-send custom-btn-back btn-2" onclick="location.href='#/about'">Volver</button><br><br>
+            <button id="volver" name="back" class="custom-btn-send btn-2" onclick="location.href='#/about'">Volver</button><br><br>
         </div>
         `;
     }
@@ -65,7 +65,7 @@ const Enviado = {
         return `
         <div id="sent" class="mostrarTodo">
             <h1 class="first">¡Enviado exitosamente!</h1><br><br>
-            <button id="volver" name="back" class="custom-btn-send custom-btn-back btn-2" onclick="location.href='#/about'">Volver</button><br><br>
+            <button id="volver" name="back" class="custom-btn-send btn-2" onclick="location.href='#/about'">Volver</button><br><br>
         </div>
         `;
     }
@@ -318,7 +318,7 @@ $(function () {
         console.log("JQUERY - Activo Ventana de Portafolios")
 
         //Transición habia abajo
-        $('#imgPortfolio').toggle(1000, function () {
+        $('#imgPortfolio').slideToggle(1000, function () {
             console.log('JQUERY - Mostrando las imágenes de Portafolios');
             $("#imgPortfolio").addClass("skillsContainer");
             $('html, body').animate({
@@ -333,7 +333,7 @@ $(function () {
         console.log("JQUERY - Activo Ventana de herramientas de diseño")
 
         //Transición habia abajo
-        $('#imgDesignTools').toggle(1000, function () {
+        $('#imgDesignTools').slideToggle(1000, function () {
             console.log('JQUERY - Mostrando las imágenes de herramientas de diseño');
             $("#imgDesignTools").addClass("divSkills");
             $('html, body').animate({
