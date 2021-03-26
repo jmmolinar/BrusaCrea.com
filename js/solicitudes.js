@@ -6,6 +6,24 @@
 
 */
 
+var home = `<div class="slider2">
+	<ul>
+		<li>
+      <img class="logos" src="image/logos/BrusaCrea.png">
+    </li>
+    <li>
+    <img class="logos" src="image/logos/BrusaDesign.png">
+    </li>
+    <li>
+    <img class="logos" src="image/logos/BrusaUXUI.png">
+    </li>
+    <li>
+    <img class="logos" src="image/logos/Brusa.png">
+    </li>
+  </ul>
+</div>
+`;
+
 var identity = `<form id="formulario" method="post" action="sendMail.php">
   <div id="superior" class="frame">
     <img id="designer" class="circular--square" src="image/identidad/Sabri.jpg">
@@ -30,23 +48,27 @@ var identity = `<form id="formulario" method="post" action="sendMail.php">
 </form>
 `;
 
-var skills = `<div id="skills">
+var skills = `<div id="skills" class="profile">
 <div class="divSkillsOptions">
   <legend id="portfolio" class="legend-skills btn-2">Portafolio</legend>
 </div>
 <div id="imgPortfolio" class="hidden">
   <ul>
     <li>
-      <div class="divImage">
-        <!--<div id="tituloBehance" class="divImageText"><h5>Behance</h5></div>-->
+      <!--<div class="divImage">-->
+      <figure>
         <img id="imgLiBehance" class="imgLi" src="image/circle/behance.png">
-      </div>
+        <figcaption>Behance</figcaption>
+      </figure>
+      <!--</div>-->
     </li>
     <li>
-      <div class="divImage">
-        <!--<div id="tituloWix" class="divImageText"><h5>Wix</h5></div>-->
+      <!--<div class="divImage">-->
+      <figure>
         <img id="imgLiWix" class="imgLi" src="image/circle/wix.png">
-      </div>
+        <figcaption>Wix</figcaption>
+      </figure>
+      <!--</div>-->
     </li>
   </ul>
 </div>
@@ -54,21 +76,50 @@ var skills = `<div id="skills">
   <legend id="designTools" class="legend-skills btn-2">Herramientas de Diseño</legend>
 </div>
 <div id="imgDesignTools" class="hidden">
-  <!--<div class="divImage">
-    <div id="tituloIllustrator" class="divImageText divImageTextSkill"><h5>Illustrator</h5></div>
-    <img class="imgSkill" alt="Illustrator" src="image/circle/ai.png">
-  </div>-->
-  <img class="imgSkill" alt="Illustrator" src="image/circle/ai.png">
-  <img class="imgSkill" src="image/circle/ps.png">
-  <img class="imgSkill" src="image/circle/id.png">
-  <img class="imgSkill" src="image/circle/ae.png">
-  <img class="imgSkill" src="image/circle/xd.png">
-  <img class="imgSkill" src="image/circle/figma.png">
-  <img class="imgSkill" src="image/circle/sk.png">
-  <img class="imgSkill" src="image/circle/marvel.png">
-  <img class="imgSkill" src="image/circle/in.png">
-  <img class="imgSkill" src="image/circle/ow.png">
-  <img class="imgSkill" src="image/circle/whimsical.png">
+  <figure>
+    <img class="imgSkill" src="image/circle/ai.png">
+    <figcaption>Illustrator</figcaption>
+  </figure>
+  <figure>
+    <img class="imgSkill" src="image/circle/ps.png">
+    <figcaption>Photoshop</figcaption>
+  </figure>
+  <figure>
+    <img class="imgSkill" src="image/circle/id.png">
+    <figcaption>Indesign</figcaption>
+  </figure>
+  <figure>
+    <img class="imgSkill" src="image/circle/ae.png">
+    <figcaption>After Effects</figcaption>
+  </figure>
+  <figure>
+    <img class="imgSkill" src="image/circle/xd.png">
+    <figcaption>Experience Design</figcaption>
+  </figure>
+  <figure>
+    <img class="imgSkill" src="image/circle/figma.png">
+    <figcaption>Figma</figcaption>
+  </figure>
+  <figure>
+    <img class="imgSkill" src="image/circle/sk.png">
+    <figcaption>Sketch</figcaption>
+  </figure>
+  <figure>
+    <img class="imgSkill" src="image/circle/marvel.png">
+    <figcaption>Marvel</figcaption>
+  </figure>
+  <figure>
+    <img class="imgSkill" src="image/circle/in.png">
+    <figcaption>Invision</figcaption>
+  </figure>
+  <figure>
+    <img class="imgSkill" src="image/circle/ow.png">
+    <figcaption>Optimal Workshop</figcaption>
+  </figure>
+  <figure>
+    <img class="imgSkill" src="image/circle/whimsical.png">
+    <figcaption>Whimsical</figcaption>
+  </figure>
 </div>
 <div class="divSkillsOptions">
   <legend id="descargarPerfil" class="legend-skills btn-2">Descargar CV <i class="fas fa-cloud-download-alt"></i></legend>

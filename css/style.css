@@ -128,7 +128,14 @@ body {
     transition: transform 1s;
   }
 
-  #headerLogo:hover {
+  .logos {
+    margin: 0 auto;
+    width: 300px;
+    display:block;
+    transition: transform 1s;
+  }
+
+  .logos:hover {
     transform: scale(1.10) translateX(0px);
   }
 
@@ -172,6 +179,8 @@ body {
   }
 
   .divMenu {
+    margin: 0 auto;
+    max-width: 440px;
     text-align: center;
   }
 
@@ -381,12 +390,31 @@ body {
   
   }
 
-  #skills {
+  .profile {
     text-align: center;
     align-items:center;
     justify-content:center;
     padding-right: 24px;
     padding-left: 24px;
+  }
+
+  .homeSliderContainer {
+
+    scroll-snap-type: mandatory;
+
+    position: relative;
+    margin: auto;
+    max-width: 400px;
+    background-color: white;
+    text-align: center;
+    align-items:center;
+    justify-content:center;
+    padding: 24px;
+  }
+
+  .slides {
+    /* display: none; */
+    scroll-snap-align: start;
   }
 
   .imgSkill {
@@ -401,9 +429,39 @@ body {
 
   .imgSkill:hover {
     /* background: gold; */
-    /* opacity: 0.1; */
-    transform: scale(1.10) translateX(0px) translateY(-3px);
+    /*opacity: 0.1;*/
+    transform: scale(1.10) translateX(0px);
   }
+
+  /* Invisible texto */
+  figcaption {
+    display:none;
+    font-size: 10px;
+    font-weight: 500;
+    /*transition: all 1s;*/
+    transition: transform .2s;
+    border: 1px solid black;
+    padding: 2px;
+    margin: 5px auto;
+    border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+    -webkit-border-radius: 6px 6px 6px 6px;
+    color: black;
+    background-color: white;
+  }
+    
+  /* Visible texto */
+  figure:hover > figcaption {
+    display:block;
+    /*transition: all 1s;*/
+    transform: scale(1.10) translateY(0px);
+  }
+
+  figure {
+    display: inline-block;
+    margin: 0px;
+  }
+
 
   .divSkills{ /*Se activa esta clase con un evento*/
     /* padding: 10px 15px;
@@ -429,9 +487,8 @@ body {
     justify-content: center;
   }
   
-  .divImageText{
-    width: 64px;/*El div del texto tendrá el mismo ancho que el asignado a la imagen en Portfolio*/
-    border: 1px solid red;
+  /* .divImageText{
+    width: 64px;
     text-align: center;
     position:absolute;
     vertical-align: middle;
@@ -439,15 +496,14 @@ body {
     margin: 0 auto;
   }
 
-  /*El resto lo toma de divImageTextPort y en el html coloco ambas clases*/
   .divImageTextSkill{
-    width: 60px;/*El div del texto tendrá el mismo ancho que el asignado a la imagen en Tools*/
+    width: 60px;
     margin: 4px auto;    
-  }
+  } */
 
   .imgLi {
-    filter: saturate(2) brightness(100%) contrast(140%);
-    -webkit-filter: saturate(2) brightness(100%) contrast(140%);
+    filter: saturate(2) brightness(100%) contrast(200%);
+    -webkit-filter: saturate(2) brightness(100%) contrast(200%);
     width: 64px;
     cursor: pointer;
     transition: transform .2s;
@@ -455,7 +511,7 @@ body {
 
   .imgLi:hover {
     /* opacity: 0.1; */
-    transform: scale(1.10) translateX(0px) translateY(-3px);
+    transform: scale(1.10) translateX(0px) translateY(-6px); /*Traslado -6 para separar más del figcaption*/
   }
 
   .skillsContainer{
@@ -491,11 +547,15 @@ body {
 
 
     header,img {
-      margin: 0 auto;
       width: 200px;
       /* Para centrar la imagen */
+      /* margin: 0 auto;
       display:block;
-      transition: transform 1s;
+      transition: transform 1s; */
+    }
+
+    .logos {
+      width: 200px;
     }
 
     p.footer{

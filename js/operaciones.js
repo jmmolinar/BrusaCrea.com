@@ -27,6 +27,7 @@ const SkillsPage = {
 
 const HomePage = {
     render: function () {
+        //return home;
         return `
         <div id="inicio">
         </div>
@@ -204,7 +205,7 @@ $(function () {
     });
 
     $('div #pages').on("blur", 'input#nombre', function () {
-        $(this).css("background-color", '#E0F2F1')// Quito focus y agrego blur al input nombre
+        $(this).css("background-color", '#fffff2')// Quito focus y agrego blur al input nombre
     });
 
     $('div #pages').on("focus", 'input#correo', function () {
@@ -212,7 +213,7 @@ $(function () {
     });
 
     $('div #pages').on("blur", 'input#correo', function () {
-        $(this).css("background-color", '#E0F2F1')// Quito focus y agrego blur al input correo
+        $(this).css("background-color", '#fffff2')// Quito focus y agrego blur al input correo
     });
 
     $('div #pages').on("focus", 'input#asunto', function () {
@@ -220,7 +221,7 @@ $(function () {
     });
 
     $('div #pages').on("blur", 'input#asunto', function () {
-        $(this).css("background-color", '#E0F2F1')// Quito focus y agrego blur al input asunto
+        $(this).css("background-color", '#fffff2')// Quito focus y agrego blur al input asunto
     });
 
     $('div #pages').on("focus", 'textarea#mensaje', function () {
@@ -228,7 +229,7 @@ $(function () {
     });
 
     $('div #pages').on("blur", 'textarea#mensaje', function () {
-        $(this).css("background-color", '#E0F2F1')// Quito focus y agrego blur al textarea mensaje
+        $(this).css("background-color", '#fffff2')// Quito focus y agrego blur al textarea mensaje
     });
 
 
