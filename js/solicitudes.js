@@ -1,9 +1,6 @@
 /*
   Desarrollo: José Miguel Molina Rondón
   BrusaCrea.com
-
-  - En construccción
-
 */
 
 var home = `<div class="slider2">
@@ -24,9 +21,8 @@ var home = `<div class="slider2">
 </div>
 `;
 
-var home2 = `<div class="profile">
-  <!--<div class="image-Box"></div>-->
-  <img class="mandala" src="image/home/branding1.jpg">
+var home2 = `<div class="imgHome">
+  <img class="mandala" src="image/home/franelaBrusa.png">
 </div>
 `;
 

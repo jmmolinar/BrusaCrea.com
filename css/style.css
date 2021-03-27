@@ -1,11 +1,3 @@
-/*
-  Desarrollo: José Miguel Molina Rondón
-  BrusaCrea.com
-
-  - En construcción
-
-*/
-
 *, *:before, *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -147,18 +139,18 @@ body {
     width: 250px;*/
     /* Para prueba con branding*/
     margin: 0 auto;
-    padding: 10px 10px;
-    width: 300px;
+    /* padding: 10px 10px; */
+    width: 400px;
     /**/
     display:block;
-    animation: opacityMandala 10s infinite;
+    /* animation: opacityMandala 10s infinite;
     animation-direction: alternate;
     -webkit-animation: opacityMandala 10s infinite;
     -webkit-animation-direction: alternate;
     -moz-animation: opacityMandala 10s infinite;
     -moz-animation-direction: alternate;
     -o-animation: opacityMandala 10s infinite;
-    -o-animation-direction: alternate;
+    -o-animation-direction: alternate; */
 
     /* Para prueba con branding*/
     -webkit-border-radius: 28px 28px 28px 28px;
@@ -451,7 +443,6 @@ body {
     form {
       max-width: 480px;
     }
-  
   }
 
   .profile {
@@ -460,6 +451,12 @@ body {
     justify-content:center;
     padding-right: 24px;
     padding-left: 24px;
+  }
+
+  .imgHome {
+    text-align: center;
+    align-items:center;
+    justify-content:center;
   }
 
   .homeSliderContainer {
@@ -542,20 +539,6 @@ body {
     /* position:relative; */
     justify-content: center;
   }
-  
-  /* .divImageText{
-    width: 64px;
-    text-align: center;
-    position:absolute;
-    vertical-align: middle;
-    z-index:-1;
-    margin: 0 auto;
-  }
-
-  .divImageTextSkill{
-    width: 60px;
-    margin: 4px auto;    
-  } */
 
   .imgLi {
     filter: saturate(2) brightness(100%) contrast(200%);
@@ -615,7 +598,7 @@ body {
     }
 
     .mandala {
-      width: 200px;
+      width: 300px;
     }
 
     p.footer{

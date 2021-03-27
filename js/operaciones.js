@@ -27,11 +27,10 @@ const SkillsPage = {
 
 const HomePage = {
     render: function () {
-        return home2;
-        // return `
-        // <div id="inicio">
-        // </div>
-        // `;
+        return `
+        <div id="inicio">
+        </div>
+        `;
     }
 }
 
@@ -231,7 +230,6 @@ $(function () {
     $('div #pages').on("blur", 'textarea#mensaje', function () {
         $(this).css("background-color", '#fffff2')// Quito focus y agrego blur al textarea mensaje
     });
-
 
     //EVENTO AL PRESIONAR LA PRIMERA OPCIÓN DEL MENÚ
     $('div #all').on('click', 'a#optionA', function () {
