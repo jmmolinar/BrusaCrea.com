@@ -101,6 +101,9 @@ body {
     background-size: 300% 300%;
     position: relative;
     animation: change 15s ease-out infinite;
+    -webkit-animation: change 15s ease-out infinite;
+    -moz-animation: change 15s ease-out infinite;
+    -o-animation: change 15s ease-out infinite;
     /**/
     padding-top: 30px;
     padding-right: 10px;
@@ -137,6 +140,67 @@ body {
 
   .logos:hover {
     transform: scale(1.10) translateX(0px);
+  }
+
+  .mandala {
+    /*margin: 0 auto;
+    width: 250px;*/
+    /* Para prueba con branding*/
+    margin: 0 auto;
+    padding: 10px 10px;
+    width: 300px;
+    /**/
+    display:block;
+    animation: opacityMandala 10s infinite;
+    animation-direction: alternate;
+    -webkit-animation: opacityMandala 10s infinite;
+    -webkit-animation-direction: alternate;
+    -moz-animation: opacityMandala 10s infinite;
+    -moz-animation-direction: alternate;
+    -o-animation: opacityMandala 10s infinite;
+    -o-animation-direction: alternate;
+
+    /* Para prueba con branding*/
+    -webkit-border-radius: 28px 28px 28px 28px;
+    -moz-border-radius: 28px 28px 28px 28px;
+    border-radius: 28px 28px 28px 28px;
+    /**/
+  }
+
+  @keyframes opacityMandala{
+    from {
+      opacity: 0.03;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .mandala:hover {
+    transform: scale(1.10) translateX(0px);
+  }
+
+  .image-Box {
+    max-width: 440px;
+    height: 300px;
+    background-image: url('image/home/branding1.jpg');
+    background-size: 300px;
+    margin: 2px auto;
+    box-shadow: 0 0 60px rgba(0,0,0,1);
+    animation: fade 20s infinite;
+    -moz-animation: fade 20s infinite;
+  }
+
+  @keyframes fade {
+    33%{
+      background-image: url("/image/home/branding2.jpg");
+    }
+    66%{
+      background-image: url("/image/home/branding3.jpg");
+    }
+    100%{
+      background-image: url("/image/home/branding4.jpg");
+    }
   }
 
   form {
@@ -399,9 +463,6 @@ body {
   }
 
   .homeSliderContainer {
-
-    scroll-snap-type: mandatory;
-
     position: relative;
     margin: auto;
     max-width: 400px;
@@ -410,11 +471,6 @@ body {
     align-items:center;
     justify-content:center;
     padding: 24px;
-  }
-
-  .slides {
-    /* display: none; */
-    scroll-snap-align: start;
   }
 
   .imgSkill {
@@ -471,7 +527,7 @@ body {
     align-items:center;
     justify-content:center;
     border: 1px solid #c4cdda;
-    transform: translateY(-10px);
+    transform: translateY(-10px);/*para que queda junto al legend*/
     /*background-color: #e8eeef; white*/
     background-color: #fffff2;
     max-width: 440px;
@@ -555,6 +611,10 @@ body {
     }
 
     .logos {
+      width: 200px;
+    }
+
+    .mandala {
       width: 200px;
     }
 

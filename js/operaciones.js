@@ -27,11 +27,11 @@ const SkillsPage = {
 
 const HomePage = {
     render: function () {
-        //return home;
-        return `
-        <div id="inicio">
-        </div>
-        `;
+        return home2;
+        // return `
+        // <div id="inicio">
+        // </div>
+        // `;
     }
 }
 

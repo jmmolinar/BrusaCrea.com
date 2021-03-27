@@ -24,6 +24,12 @@ var home = `<div class="slider2">
 </div>
 `;
 
+var home2 = `<div class="profile">
+  <!--<div class="image-Box"></div>-->
+  <img class="mandala" src="image/home/branding1.jpg">
+</div>
+`;
+
 var identity = `<form id="formulario" method="post" action="sendMail.php">
   <div id="superior" class="frame">
     <img id="designer" class="circular--square" src="image/identidad/Sabri.jpg">
@@ -85,16 +91,16 @@ var skills = `<div id="skills" class="profile">
     <figcaption>Photoshop</figcaption>
   </figure>
   <figure>
+    <img class="imgSkill" src="image/circle/xd.png">
+    <figcaption>Adobe XD</figcaption>
+  </figure>
+  <figure>
     <img class="imgSkill" src="image/circle/id.png">
     <figcaption>Indesign</figcaption>
   </figure>
   <figure>
     <img class="imgSkill" src="image/circle/ae.png">
     <figcaption>After Effects</figcaption>
-  </figure>
-  <figure>
-    <img class="imgSkill" src="image/circle/xd.png">
-    <figcaption>Experience Design</figcaption>
   </figure>
   <figure>
     <img class="imgSkill" src="image/circle/figma.png">
@@ -113,12 +119,12 @@ var skills = `<div id="skills" class="profile">
     <figcaption>Invision</figcaption>
   </figure>
   <figure>
-    <img class="imgSkill" src="image/circle/ow.png">
-    <figcaption>Optimal Workshop</figcaption>
-  </figure>
-  <figure>
     <img class="imgSkill" src="image/circle/whimsical.png">
     <figcaption>Whimsical</figcaption>
+  </figure>
+  <figure>
+    <img class="imgSkill" src="image/circle/ow.png">
+    <figcaption>Optimal Workshop</figcaption>
   </figure>
 </div>
 <div class="divSkillsOptions">
