@@ -3,26 +3,8 @@
   BrusaCrea.com
 */
 
-var home = `<div class="slider2">
-	<ul>
-		<li>
-      <img class="logos" src="image/logos/BrusaCrea.png">
-    </li>
-    <li>
-    <img class="logos" src="image/logos/BrusaDesign.png">
-    </li>
-    <li>
-    <img class="logos" src="image/logos/BrusaUXUI.png">
-    </li>
-    <li>
-    <img class="logos" src="image/logos/Brusa.png">
-    </li>
-  </ul>
-</div>
-`;
-
-var home2 = `<div class="imgHome">
-  <img class="mandala" src="image/home/franelaBrusa.png">
+var home = `<div class="imgHome">
+  <img class="mandala" src="image/home/Brusa.png">
 </div>
 `;
 
@@ -30,9 +12,13 @@ var identity = `<form id="formulario" method="post" action="sendMail.php">
   <div id="superior" class="frame">
     <img id="designer" class="circular--square" src="image/identidad/Sabri.jpg">
     <h1 class="first">Sabrina Leañez</h1>
-    <p class="profesion">Diseñadora Gráfica UX&UI</p>
-    <p class="descripcion">Bienvenido a mi marca personal "Brusa". Por medio de este espacio podrás visualizar
-    mis proyectos y conectar con mis redes sociales.  No dudes en contactarme para trabajar juntos, darle vida
+    <p class="profesion">Diseñadora Gráfica UX/UI</p>
+    <p class="descripcion">Bienvenido a mi marca personal. Brusa nace de la iniciativa de crear 
+    contenidos visuales y cuenta con varias divisiones en donde cada una se encarga de hacer diferentes actividades. 
+    El nombre es de mi autoría y tiene un enfoque original, fácil de recordar y de mencionar. Además posee un valor emocional, es por 
+    eso que al leer la S con la A notamos la presencia de la forma del corazón.<br><br>
+    Desde brusacrea.com podrás visualizar mis proyectos 
+    y conectar con mis redes sociales. No dudes en contactarme para trabajar juntos, darle vida 
     a tus ideas por medio del diseño y compartir experiencias dentro del apasionante mundo de la creación.</p>
   </div>
   <legend id="contacto" class="legend-skills btn-2">Contáctame</legend>

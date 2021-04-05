@@ -2,8 +2,6 @@
   Desarrollo: José Miguel Molina Rondón
   BrusaCrea.com
 
-  - En construccción
-
 */
 
 ///////////////////////////////////////////////////////////////
